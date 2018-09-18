@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>BSSN PKI Playground</h1>
+<p>Hello!</p>
+<input id="extid"><br/>
+<button onclick="invoke()">Call to extension</button>
+<script>
+  function invoke() {
+    var extid = document.getElementById('extid').value;
+    console.log(extid);
+    chrome.runtime.sendMessage(extid, {action:'csr-request', data : { subject : { commonName : 'CNstring'}}}, function(response) {
+     // do nothing
+    });
+  }
+</script>
+
+</body>
+</html>
