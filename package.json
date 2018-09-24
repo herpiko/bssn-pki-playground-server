@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node serve.js",
+    "start": "npm run build && node serve.js",
+    "build": "./node_modules/.bin/browserify src.js -o ./public/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Herpiko Dwi Aguno <herpiko@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
+    "browserify": "^16.2.2",
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "express-busboy": "^7.0.0",

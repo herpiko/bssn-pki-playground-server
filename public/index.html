@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>BSSN PKI Playground</h1>
+Extension ID : <input id="extid"><br/>
+<hr>
+<p>Hello!</p>
+username : <input id="username" value="admin"><br/>
+passsword : <input id="password" value="admin"><br/>
+<button onclick="bssn.login()">Login</button> <span>tokenAccess : <span id="tokenAccess"></span></span>
+<hr>
+Token CSR : <input id="tokenCSR" value="0ea98d32-49b1-450b-9375-094160a2facc"><br/>
+Passphrase : <input id="passphrase" value="123456"><br/>
+<hr>
+<button onclick="bssn.generateAndSendCSR()">Generate and send CSR</button>
+<hr>
+<button onclick="bssn.downloadCertAndPackP12()">Download cert and pack P12</button>
+<script src="bundle.js">
+</script>
+
+</body>
+</html>
